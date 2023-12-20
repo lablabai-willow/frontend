@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {
   createBrowserRouter,
-  RouterProvider
+  RouterProvider,
+  Navigate
 } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -14,6 +15,9 @@ const router = createBrowserRouter([
   {
     path: "/dev",
     element: <App env="dev"/>
+  }, {
+    path: "*",
+    element: <Navigate to="/" replace />
   }
 ])
 

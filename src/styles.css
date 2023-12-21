@@ -8,8 +8,14 @@
     line-height: 130%;
 }
 
-input {
-    all: unset;
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 :root {
@@ -32,6 +38,10 @@ input {
     position: absolute;
     z-index: -100;
     background-color: var(--background-color);
+}
+
+.hidden {
+    display: none;
 }
 
 .spacer-fill {

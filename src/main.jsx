@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import Draw from "./Draw.jsx";
-import "./styles.css";
-
+import App from './App.jsx';
+import './styles.css';
+import store from './store/store';
+import { Provider } from 'react-redux';
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate,
-} from "react-router-dom";
+  Navigate
+} from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
@@ -25,12 +26,14 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Navigate to="/" replace />,
-  },
+    element: <Navigate to="/" replace />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>,
+)

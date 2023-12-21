@@ -1,7 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import messageReducer from './messageSlice';
+import appReducer from './appSlice';
 
-export const store = configureStore({
+export default configureStore({
     reducer: {
-        
+        message: messageReducer,
+        app: appReducer
     }
 });

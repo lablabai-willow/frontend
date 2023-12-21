@@ -11,6 +11,10 @@
     flex: 10;
 }
 
+.input-container-focused {
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
 .input-input {
     border: none;
     flex-grow: 1;

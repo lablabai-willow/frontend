@@ -2,3 +2,24 @@
     height: 90%;
     overflow-y: scroll;
 }
+
+.typing-icon-container {
+    display: flex;
+    width: 100%;
+    align-items: end;
+}
+
+.typing-icon-bubble {
+    border-radius: 1rem;
+    margin: 10px 0;
+    justify-content: start;
+    background-color: var(--receive-bubble-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem .6rem .7rem .3rem;
+}
+
+.typing-icon {
+    width: 3.7rem;
+}

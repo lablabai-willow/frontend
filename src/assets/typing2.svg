@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="96" height="28" preserveAspectRatio="xMidYMid">
+<style type="text/css">
+  text {
+    text-anchor: middle; font-size: 112px; opacity: 0;
+  }
+</style>
+<g style="transform-origin:48px 14px;transform:scale(1)">
+<g transform="translate(48,14)">
+  <g transform="translate(0,0)"><g class="path" style="transform: scale(0.79); transform-origin: -19.715px -1.0488px; animation: 0.877193s linear -0.385965s infinite normal forwards running breath-18661e8c-11e3-43d0-af3c-31c4c03d07a2;"><path d="M9.18-1.46L9.18-1.46L9.18-1.46Q6.83-3.81 6.83-7.17L6.83-7.17L6.83-7.17Q6.83-10.53 9.18-12.94L9.18-12.94L9.18-12.94Q11.54-15.34 14.90-15.34L14.90-15.34L14.90-15.34Q18.26-15.34 20.66-12.94L20.66-12.94L20.66-12.94Q23.07-10.53 23.07-7.17L23.07-7.17L23.07-7.17Q23.07-3.81 20.66-1.46L20.66-1.46L20.66-1.46Q18.26 0.90 14.90 0.90L14.90 0.90L14.90 0.90Q11.54 0.90 9.18-1.46" fill="#9fb943" stroke="none" stroke-width="none" transform="translate(-34.665008544921875,6.1711962890625)" style="fill: rgb(159, 185, 67);"></path></g><g class="path" style="transform: scale(0.79); transform-origin: 6.83499px -1.0488px; animation: 0.877193s linear -0.192982s infinite normal forwards running breath-18661e8c-11e3-43d0-af3c-31c4c03d07a2;"><path d="M35.73-1.46L35.73-1.46L35.73-1.46Q33.38-3.81 33.38-7.17L33.38-7.17L33.38-7.17Q33.38-10.53 35.73-12.94L35.73-12.94L35.73-12.94Q38.08-15.34 41.44-15.34L41.44-15.34L41.44-15.34Q44.80-15.34 47.21-12.94L47.21-12.94L47.21-12.94Q49.62-10.53 49.62-7.17L49.62-7.17L49.62-7.17Q49.62-3.81 47.21-1.46L47.21-1.46L47.21-1.46Q44.80 0.90 41.44 0.90L41.44 0.90L41.44 0.90Q38.08 0.90 35.73-1.46" fill="#9fb943" stroke="none" stroke-width="none" transform="translate(-34.665008544921875,6.1711962890625)" style="fill: rgb(96, 126, 55);"></path></g><g class="path" style="transform: scale(0.79); transform-origin: 33.375px -1.0488px; animation: 0.877193s linear 0s infinite normal forwards running breath-18661e8c-11e3-43d0-af3c-31c4c03d07a2;"><path d="M62.27-1.46L62.27-1.46L62.27-1.46Q59.92-3.81 59.92-7.17L59.92-7.17L59.92-7.17Q59.92-10.53 62.27-12.94L62.27-12.94L62.27-12.94Q64.62-15.34 67.98-15.34L67.98-15.34L67.98-15.34Q71.34-15.34 73.75-12.94L73.75-12.94L73.75-12.94Q76.16-10.53 76.16-7.17L76.16-7.17L76.16-7.17Q76.16-3.81 73.75-1.46L73.75-1.46L73.75-1.46Q71.34 0.90 67.98 0.90L67.98 0.90L67.98 0.90Q64.62 0.90 62.27-1.46" fill="#9fb943" stroke="none" stroke-width="none" transform="translate(-34.665008544921875,6.1711962890625)" style="fill: rgb(182, 200, 159);"></path></g></g>
+</g>
+</g>
+<style id="breath-18661e8c-11e3-43d0-af3c-31c4c03d07a2" data-anikit="">@keyframes breath-18661e8c-11e3-43d0-af3c-31c4c03d07a2
+{
+  0% {
+    animation-timing-function: cubic-bezier(0.9647,0.2413,-0.0705,0.7911);
+    transform: scale(0.7899999999999999);
+  }
+  51% {
+    animation-timing-function: cubic-bezier(0.9226,0.2631,-0.0308,0.7628);
+    transform: scale(1.14982);
+  }
+  100% {
+    transform: scale(0.7899999999999999);
+  }
+}</style></svg>

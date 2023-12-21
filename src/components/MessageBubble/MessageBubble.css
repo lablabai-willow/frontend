@@ -16,7 +16,7 @@
     max-width: 16.5rem; /* Maximum width of the bubble */
     padding: .5rem 1rem; /* Padding inside the bubble */
     border-radius: 1rem; /* Rounded corners for bubble effect */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: some shadow for depth */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5); /* Optional: some shadow for depth */
     margin: 10px 0; /* Margin for spacing between bubbles */
 }
 

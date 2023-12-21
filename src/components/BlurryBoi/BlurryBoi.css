@@ -1,0 +1,10 @@
+.blurry-boi {
+    position: fixed;
+    background: var(--tertiary-color);
+    filter: blur(100px);
+    width: 15rem;
+    height: 22rem;
+    flex-shrink: 0;
+    z-index: -99;
+    border-radius: 50%;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
-import Footer from './components/Footer'
+import { BlurryBoi, ChatWindow, Header, Footer } from './components'
 
 export default function App({ env }) {
 
@@ -10,12 +10,11 @@ export default function App({ env }) {
     }
 
     return (
-        <div class="window">
-            <div class="blurry-boi blurry-boi-1" />
-            <div class="blurry-boi blurry-boi-2" />
-            <div class="chat-window">
-                {env === 'prod' ? 'PRODDDDD ENVIRONMENT' : 'DEV ENVIRONMENT'}
-            </div>
+        <div className="window">
+            <BlurryBoi className="blurry-boi-1" />
+            <BlurryBoi className="blurry-boi-2" />
+            <Header />
+            <ChatWindow env={env}/>
             <Footer />
         </div>
     );

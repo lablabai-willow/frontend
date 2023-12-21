@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 130%;
 }
 
 input {
@@ -11,8 +15,11 @@ input {
 :root {
     --primary-color: #61977B; /* Define a variable */
     --tertiary-color: #8fc490;
+    --send-bubble-color: #348816;
+    --receive-bubble-color: #E5E5E5;
     --background-color: #eaf7ea;
     --light-border: #E5E6E9;
+    --max-content-width: 50rem;
 
 }
 
@@ -27,72 +34,8 @@ input {
     background-color: var(--background-color);
 }
 
-.chat-window {
-    height: 90%;
-}
-
-.footer-container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    background: none;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-add_button-icon {
-    height: 100%;
-}
-
-.footer-add_button {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 1rem;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-}
-
-.input-container {
-    width: 100%;
-    max-width: 40rem;
-    height: 3.5rem;
-    padding: .5rem 1rem .5rem 1rem;
-    flex-shrink: 0;
-    border-radius: 164px;
-    border: 1px solid var(--light-border);
-    background: white;
-    display: flex;
-    flex: 10;
-    
-}
-
-.input-input {
-    border: none;
-    flex: 8;
-    height: auto;
-}
-
-.input-send {
-    background: none;
-    flex: 1;
-    height: auto;
-    margin: .3rem;
-}
-
-.blurry-boi {
-    position: fixed;
-    background: var(--tertiary-color);
-    filter: blur(100px);
-    width: 15rem;
-    height: 22rem;
-    flex-shrink: 0;
-    z-index: -99;
-    border-radius: 50%;
+.spacer-fill {
+    flex-grow: 1;
 }
 
 .blurry-boi-1 {

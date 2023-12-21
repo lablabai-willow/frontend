@@ -1,0 +1,18 @@
+.header-container {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: solid;
+    border-width: 2px;
+    color: var(--send-bubble-color);
+    margin-bottom: .7rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--send-bubble-color);
+}

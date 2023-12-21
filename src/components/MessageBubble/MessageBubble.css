@@ -1,0 +1,60 @@
+.msg_bubble-container {
+    display: flex;
+    width: 100%;
+    align-items: end;
+}
+
+.msg_bubble-container-end_user {
+    justify-content: end;
+}
+
+.msg_bubble-container-ai_coach {
+    justify-content: start;
+}
+
+.msg_bubble {
+    max-width: 16.5rem; /* Maximum width of the bubble */
+    padding: .5rem 1rem; /* Padding inside the bubble */
+    border-radius: 1rem; /* Rounded corners for bubble effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: some shadow for depth */
+    margin: 10px 0; /* Margin for spacing between bubbles */
+}
+
+.msg_bubble-ai_coach {
+    background: var(--receive-bubble-color);
+}
+
+.msg_bubble-end_user {
+    background: var(--send-bubble-color);
+    color: white;
+}
+
+/* TEXT */
+.text_bubble {
+    word-wrap: break-word; /* Ensures the text wraps inside the bubble */
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/* IMAGE */
+.img_bubble {
+    max-height: 20rem;
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+    overflow: hidden;
+}
+
+.img_bubble-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+

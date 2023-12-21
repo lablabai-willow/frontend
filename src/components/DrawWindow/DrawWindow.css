@@ -1,0 +1,47 @@
+.draw-header-container {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: solid;
+  border-width: 2px;
+  color: var(--send-bubble-color);
+  margin-bottom: 0.7rem;
+}
+
+.draw-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--send-bubble-color);
+  flex: 1;
+  text-align: center;
+  margin-right: 1.5rem;
+}
+
+.tldraw-container {
+  height: 90vh;
+  width: 100%;
+}
+
+.draw-back_button-icon {
+  height: 100%;
+}
+
+.draw-back_button {
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.draw-back_button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}

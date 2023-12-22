@@ -24,9 +24,9 @@ const ChatWindow = ({ convoHistory }) => {
     return (
         <div ref={scrollRef} className="chat-window">
             {convoHistory.map(( messageObject ) => {
-                return <MessageBubble ref={scrollRef} key={messageObject.key} {...messageObject} />
+                return <MessageBubble refToPass={scrollRef} key={messageObject.key} {...messageObject} />
             })}
-            {tempMessage && <MessageBubble key="TEMP_OBJECT" ref={scrollRef} {...tempMessage} />}
+            {tempMessage && <MessageBubble refToPass={scrollRef} key="TEMP_OBJECT" {...tempMessage} />}
             {typingBubbleVisible && (
                 <div ref={scrollRef} className="typing-icon-container">
                     <div className="typing-icon-bubble ">

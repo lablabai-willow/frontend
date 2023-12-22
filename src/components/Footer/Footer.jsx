@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendMessage } from '../../store/messageSlice';
+import { sendMessage, setTempFile } from '../../store/messageSlice';
 import { END_USER } from '../../constants';
 import { Input, Menu } from '../../components';
 import plusSolid from '../../assets/plus-solid.svg';
@@ -20,12 +20,17 @@ const Footer = () => {
     }
 
     const handleImageChange = (e) => {
-        dispatch(sendMessage({
-            user: END_USER,
-            env,
-            type: "image",
-            file: e.target.files[0]
-        }));
+        const reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0])
+        reader.onload = () => {
+            dispatch(setTempFile(reader.result))
+            dispatch(sendMessage({
+                user: END_USER,
+                env,
+                type: "image",
+                file: e.target.files[0]
+            }));
+        }
     }
 
     const toggleMenu = () => {

@@ -3,9 +3,10 @@ import { AUDIO, BASE_URL, IMAGE, LOADING_STATES, SUPPORTED_FILE_TYPES, TEXT } fr
 
 const appendMessage = (state, env, newMessage) => {
     const key = `${env}Messages`;
+    console.log({env, key: state[key], keyString: JSON.stringify(state[key])})
     const newMessageList = [...state[key], newMessage];
+    console.log({state, env, key, newMessage})
     state[key] = newMessageList;
-    state.loading = LOADING_STATES.SUCCESS;
 }
 
 export const clearConversationHistory = createAsyncThunk(
@@ -26,24 +27,22 @@ export const clearConversationHistory = createAsyncThunk(
 
 export const sendFile = createAsyncThunk(
     'POST /api/sendFile',
-    async ({ env, file, user, message }, thunkAPI) => {
-        const sendFileURL = `${BASE_URL}/sendFile?env=${env}&user=${user}`;
+    async ({ env, file, userMessage }) => {
+        const sendFileURL = `${BASE_URL}/sendFile?env=${env}&contentId=${userMessage.content}`;
+        console.log({sendFileURL})
         const formData = new FormData();
         formData.append('file', file);
+        console.log({sendFileURL, env, formData, contentId: userMessage.content})
         const response = await fetch(sendFileURL, {
             method: "POST",
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
             body: formData
         });
 
-        if (response.status() !== 200) {
-            state.loading = LOADING_STATES.FAILED;
-            return { message: null };
+        if (response.status !== 200) {
+            return { env, userMessage };
         }
-        
-        return { type: message.type, env, message };
+
+        return { env, userMessage };
     }
 )
 
@@ -82,7 +81,7 @@ export const sendMessage = createAsyncThunk(
                 return { type, env, userMessage, agentResponse }
             } else {
                 // skip agent response, get in sendFile
-                thunkAPI.dispatch(sendFile({ env, file, user, message }))
+                thunkAPI.dispatch(sendFile({ env, file, user, userMessage }))
                 return { type, env, userMessage }
             }
 
@@ -114,18 +113,9 @@ const extraReducers = (builder) => {
                 agentResponse && appendMessage(state, env, agentResponse)
             }
         })
-        .addCase(sendFile.pending, (state, action) => {
-            const { file } = action.meta.arg;
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-                state.tempFile = reader.result;
-            };
-
-        })
         .addCase(sendFile.fulfilled, (state, action) => {
-            const { env, message } = action.payload
-            appendMessage(state, env, message)
+            const { env, userMessage } = action.payload
+            appendMessage(state, env, userMessage)
         })
         .addCase(clearConversationHistory.fulfilled, (state, action) => {
             state[`${action.payload.env}Messages`] = []
@@ -149,7 +139,9 @@ export const fetchConversationHistory = createAsyncThunk(
     }
 );
 
-
+const setTempFileReducer = (state, action) => {
+    state.tempFile = action.payload
+}
 
 export const messageSlice = createSlice({
     name: 'message',
@@ -160,8 +152,11 @@ export const messageSlice = createSlice({
         tempMessage: null,
         tempFile: null
     },
-    reducers: {},
+    reducers: {
+        setTempFile: setTempFileReducer
+    },
     extraReducers
 });
 
+export const { setTempFile } = messageSlice.actions;
 export default messageSlice.reducer;

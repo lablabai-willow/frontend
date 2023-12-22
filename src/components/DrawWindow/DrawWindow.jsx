@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
 import { Tldraw } from "@tldraw/tldraw";
 import arrowBack from "../../assets/arrow_back.svg";
-
+import DrawUI from "./DrawUI/DrawUI";
 import "@tldraw/tldraw/tldraw.css";
 import "./DrawWindow.css";
 
@@ -18,7 +17,9 @@ const DrawWindow = () => {
         <h1 className="draw-title">Drawing Exercise</h1>
       </div>
       <div className="tldraw-container">
-        <Tldraw />
+        <Tldraw hideUi>
+          <DrawUI />
+        </Tldraw>
       </div>
     </div>
   );

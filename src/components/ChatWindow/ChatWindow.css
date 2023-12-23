@@ -49,6 +49,11 @@
   background-color: var(--receive-bubble-color);
 }
 
+.intro-info {
+  font: italic;
+  color: gray;
+}
+
 @media screen and (min-width: 900px) {
   .chat-window {
     align-self: center;

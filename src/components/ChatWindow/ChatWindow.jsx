@@ -39,6 +39,9 @@ const ChatWindow = ({ convoHistory }) => {
           <h2 className="intro-text">
             Hi, I'm Willow. I'm here for you. What's on your mind today?
           </h2>
+          <p className="intro-info">
+            You can input images via typing the url or uploading.
+          </p>
         </div>
       ) : (
         convoHistory.map((messageObject) => {

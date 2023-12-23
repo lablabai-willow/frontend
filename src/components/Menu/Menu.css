@@ -1,26 +1,43 @@
-.menu-container {
-    position: fixed;
-    width: 10rem;
-    background-color: white;
-    border-radius: 1rem;
-    z-index: 3;
-    bottom: 7rem;
-    padding: .7rem;
-    display: flex;
-    flex-direction: column;
+.menu-window {
+  position: fixed;
+  width: 10rem;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 3;
+  bottom: 7rem;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-item {
-    padding: .5rem 0;
+  padding: 0.5rem 0;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
 }
 
 .divider {
-    height: 1px;
-    border: solid;
-    border-width: .5px;
-    border-color: var(--receive-bubble-color)
+  height: 1px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: var(--receive-bubble-color);
 }
 
 .clear-chat {
-    color: red;
+  color: red;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-window {
+    margin-right: 1020px;
+  }
 }

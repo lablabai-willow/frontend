@@ -1,59 +1,61 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 130%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 130%;
 }
 
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 :root {
-    --primary-color: #61977B; /* Define a variable */
-    --tertiary-color: #8fc490;
-    --send-bubble-color: #348816;
-    --receive-bubble-color: #E5E5E5;
-    --background-color: #eaf7ea;
-    --light-border: #E5E6E9;
-    --max-content-width: 50rem;
-
+  --primary-color: #61977b; /* Define a variable */
+  --tertiary-color: #8fc490;
+  --send-bubble-color: #348816;
+  --receive-bubble-color: #e5e5e5;
+  --background-color: #eaf7ea;
+  --light-border: #e5e6e9;
+  --max-content-width: 50rem;
 }
 
 .window {
-    height: 100vh;
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: -100;
-    background-color: var(--background-color);
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  z-index: -100;
+  background-color: var(--background-color);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .spacer-fill {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .blurry-boi-1 {
-    left: -30%;
-    top: 3rem;
+  left: -30%;
+  top: 3rem;
 }
 
 .blurry-boi-2 {
-    bottom: 2rem;
-    right: -30%;
+  bottom: 2rem;
+  right: -30%;
 }
